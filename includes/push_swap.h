@@ -38,7 +38,6 @@ void	sort_5(t_list **stack_a, t_list **stack_b);
 void	sort_4(t_list **stack_a, t_list **stack_b);
 void	sort_3(t_list **stack_a);
 void	sort_stack(t_list **stack_a, t_list **stack_b);
-void	init_stack(t_list **stack, int argc, char **argv);
 // Instruction functions
 int		swap(t_list **stack);
 int		push(t_list **stack_to, t_list **stack_from);

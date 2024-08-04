@@ -30,23 +30,19 @@ t_list	*ft_lstlast(t_list *head)
     }
     return(tmp);
 }
-void	ft_lstadd_back(t_list **stack, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list *last_node;
-    t_list *head;
+	t_list	*tmp;
 
-    head = *stack;
-    if(!head)
-    {
-        head = new;
-        new -> next = NULL;
-    }
-    else
-    {
-        last_node = ft_lstlast(head);
-        last_node -> next = new;
-        new -> next = NULL;
-    }
+	if (!new && !lst)
+		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	tmp = ft_lstlast(*lst);
+	tmp->next = new;
 }
 
 int	ft_lstsize(t_list *head)
